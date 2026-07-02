@@ -16,6 +16,9 @@ PROJECT.md
 .aider*
 scratchpad/
 
+# --- Local Solana / Yellowstone dev ---
+test-ledger/
+
 # --- Editor / OS ---
 .vscode/
 .idea/

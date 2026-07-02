@@ -1,0 +1,9 @@
+{
+  "libpath": "/home/kaustubh/job_related/yellowstone-grpc/target/release/libyellowstone_grpc_geyser.so",
+  "log": {
+    "level": "info"
+  },
+  "grpc": {
+    "address": "127.0.0.1:10000"
+  }
+}
