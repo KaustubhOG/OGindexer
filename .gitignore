@@ -1,0 +1,23 @@
+# --- Rust ---
+/target
+**/*.rs.bk
+*.pdb
+
+# --- Env / secrets ---
+.env
+.env.local
+*.env
+
+# --- AI / agent / planning  ---
+CLAUDE.md
+PROJECT.md
+.claude/
+.cursor/
+.aider*
+scratchpad/
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+.DS_Store
+*.swp
