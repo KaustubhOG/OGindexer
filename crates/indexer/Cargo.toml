@@ -4,3 +4,18 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+og-core = { path = "../core" }
+
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+async-trait = "0.1"
+anyhow = "1"
+futures = "0.3"
+bs58 = "0.5"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tonic = "0.12"
+
+# Pinned to the versions built into our local Geyser plugin
+# (tag v7.0.0+solana.2.2.20 — crates.io drops the +build metadata).
+yellowstone-grpc-client = "=7.0.0"
+yellowstone-grpc-proto = "=7.0.0"

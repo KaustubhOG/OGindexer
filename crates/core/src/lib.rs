@@ -1,14 +1,10 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+//! `og-core` — framework-free shared layer for OGindexer.
+//!
+//! It defines the *contracts* the rest of the workspace depends on (the `Feed`
+//! ingestion boundary today; the `Repository` / domain models later). It knows
+//! nothing about gRPC, Axum, or Postgres — concrete implementations live in the
+//! `indexer` / `api` crates.
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+pub mod feed;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub use feed::{Feed, FeedEvent};

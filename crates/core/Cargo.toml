@@ -1,6 +1,11 @@
 [package]
-name = "core"
+# Named `og-core` (imported as `og_core`), NOT `core`: a dependency literally
+# named `core` shadows Rust's std `core` in dependent crates, which breaks any
+# macro that expands to `::core::...` (e.g. async_trait, tracing).
+name = "og-core"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+async-trait = "0.1"
+anyhow = "1"
